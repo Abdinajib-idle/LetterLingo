@@ -1,13 +1,13 @@
 {
-  "files": {
-    "main.css": "/static/css/main.2ab712a8.css",
-    "main.js": "/static/js/main.d887fcf0.js",
-    "index.html": "/index.html",
-    "main.2ab712a8.css.map": "/static/css/main.2ab712a8.css.map",
-    "main.d887fcf0.js.map": "/static/js/main.d887fcf0.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.2ab712a8.css",
-    "static/js/main.d887fcf0.js"
-  ]
+  "main.css": "/LetterLingo/static/css/main.2c3120d1.chunk.css",
+  "main.js": "/LetterLingo/static/js/main.d08c0ece.chunk.js",
+  "main.js.map": "/LetterLingo/static/js/main.d08c0ece.chunk.js.map",
+  "static/js/1.ab2d10c7.chunk.js": "/LetterLingo/static/js/1.ab2d10c7.chunk.js",
+  "static/js/1.ab2d10c7.chunk.js.map": "/LetterLingo/static/js/1.ab2d10c7.chunk.js.map",
+  "runtime~main.js": "/LetterLingo/static/js/runtime~main.82dfa91e.js",
+  "runtime~main.js.map": "/LetterLingo/static/js/runtime~main.82dfa91e.js.map",
+  "static/css/main.2c3120d1.chunk.css.map": "/LetterLingo/static/css/main.2c3120d1.chunk.css.map",
+  "index.html": "/LetterLingo/index.html",
+  "precache-manifest.13b65bb9c52c2e736f3bc3d5f7fdf044.js": "/LetterLingo/precache-manifest.13b65bb9c52c2e736f3bc3d5f7fdf044.js",
+  "service-worker.js": "/LetterLingo/service-worker.js"
 }
