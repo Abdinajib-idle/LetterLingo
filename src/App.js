@@ -16,6 +16,9 @@ function App() {
   // State to store the score
   const [score, setScore] = useState(0);
 
+  //store the hidden word in for hinting
+  // let hintword;
+
   // Function to generate a random word
   const generateWord = () => {
     const randomWord = randomWords();
@@ -50,7 +53,8 @@ function App() {
       setScore(score + 1);
       generateWord();
     } else {
-      message.error("Sorry, incorrect guess");
+      message.error(`Sorry, incorrect guess. The correct word was "${word}"`);
+      generateWord();
     }
     setGuess("");
   };
@@ -81,7 +85,7 @@ function App() {
       </form>
       <br />
       <div>
-        <button onClick={generateWord}>Generate a New Word</button>
+        <button className="button" onClick={generateWord}>Generate a New Word</button>
       </div>
       </div>
     </div>
