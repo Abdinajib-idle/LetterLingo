@@ -16,18 +16,16 @@ function App() {
   // State to store the score
   const [score, setScore] = useState(0);
 
-  //store the hidden word in for hinting
-  // let hintword;
-
   // Function to generate a random word
   const generateWord = () => {
     const randomWord = randomWords();
     setWord(randomWord);
 
-    // Only hide 2 letters in the word
+    // Only hide a random number of letters in the word, but at least one
+    const lettersToHide = Math.max(Math.floor(Math.random() * (randomWord.length - 3)) + 1, 1);
     let newHiddenWord = randomWord;
     let count = 0;
-    while (count < 2) {
+    while (count < lettersToHide) {
       const randomIndex = Math.floor(Math.random() * newHiddenWord.length);
       if (newHiddenWord[randomIndex] !== "_") {
         newHiddenWord =
