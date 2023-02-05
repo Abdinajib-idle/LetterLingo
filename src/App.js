@@ -23,16 +23,12 @@ function App() {
 
     // Only hide a random number of letters in the word, but at least one
     const lettersToHide = Math.max(Math.floor(Math.random() * (randomWord.length - 3)) + 1, 1);
-    let newHiddenWord = randomWord;
-    let count = 0;
-    while (count < lettersToHide) {
-      const randomIndex = Math.floor(Math.random() * newHiddenWord.length);
-      if (newHiddenWord[randomIndex] !== "_") {
-        newHiddenWord =
-          newHiddenWord.slice(0, randomIndex) +
-          " _ " +
-          newHiddenWord.slice(randomIndex + 1);
-        count++;
+    let newHiddenWord = ""; // Start with an empty string
+    for (let i = 0; i < randomWord.length; i++) {
+      if (i < lettersToHide) {
+        newHiddenWord += " _ ";
+      } else {
+        newHiddenWord += randomWord[i];
       }
     }
     setHiddenWord(newHiddenWord);
@@ -50,11 +46,14 @@ function App() {
       message.success("You got it!");
       setScore(score + 1);
       generateWord();
+      
     } else {
       message.error(`Sorry, incorrect guess. The correct word was "${word}"`);
       generateWord();
     }
     setGuess("");
+    console.log(word)
+    console.log(guess)
   };
 
   return (
@@ -64,22 +63,26 @@ function App() {
       <p>Score: {score}</p>
       <p className="pulsate">{hiddenWord}</p>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          className="input"
-          value={guess}
-          onChange={handleGuess}
-          placeholder="Enter your guess"
-        />
-        <br />
-        <br />
-        <button
-          className="button"
-          type="submit"
-          disabled={word === ""}
-        >
-          Submit
-        </button>
+        <div className="guesser">
+        <div className="input-submit-container">
+          <input
+            type="text"
+            className="input"
+            value={guess}
+            onChange={handleGuess}
+            placeholder="Enter your guess"
+          />
+          <br/>
+
+          <button
+            className="button"
+            type="submit"
+            disabled={word === ""}
+          >
+            Submit
+          </button>
+        </div>
+        </div>
       </form>
       <br />
       <div>
@@ -88,6 +91,6 @@ function App() {
       </div>
     </div>
   );
-}
+  }  
 
 export default App;

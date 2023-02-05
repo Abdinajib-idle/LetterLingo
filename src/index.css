@@ -1,38 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+
 body {
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
   font-family: 'PT Sans', sans-serif;
   background: #333;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-.main_div{
+
+.main_div {
   display: flex;
   align-items: center;
   align-content: center;
   flex-direction: column;
   padding: 10%;
-  align-items: center;
- 
-  
-  
-  /* position: relative;
-  display: flex;
-  place-content: center;
-  place-items: center;
-  overflow: hidden;
-  border-radius: 20px; */ 
 }
-.content-div{
-  color: #fff;
+
+.content-div {
+  color: #30c8c9;
   width: 600px;
   height: 650px;
   font-size: clamp(1.953rem, 2vw, 2.441rem);
@@ -41,14 +28,16 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-items: center;
   border-radius: 20px;
   transition: all .2s;
+  padding-bottom: 20px;
 }
+
 .pulsate {
   background-color: #fff;
   border: 1.5px solid rgb(16, 15, 15);
-  color:black;
+  border-radius: 5px;
+  color: black;
   padding: 10px;
   animation: pulse 1s infinite;
 }
@@ -64,13 +53,15 @@ code {
     transform: scale(1);
   }
 }
+
 .input {
   width: fit-content;
   max-width: 320px;
   height: 11px;
-  padding: 10px;
+  padding: 20px;
   border-radius: 12px;
   border: 1.5px solid lightgrey;
+  border-radius: 5px;
   outline: none;
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   box-shadow: 0px 0px 20px -18px;
@@ -88,9 +79,21 @@ code {
 .input:focus {
   border: 2px solid grey;
 }
+.guesser{
+  display: flex;
+  
+
+}
+
+.input-submit-container {
+display: flex;
+
+flex-direction: column;
+
+}
 
 .button {
-  --color: #f8f8f8;
+  --color: #30c8c9;
   padding: 0.8em 1.7em;
   background-color: transparent;
   border-radius: .2em;
