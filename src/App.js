@@ -52,8 +52,7 @@ function App() {
       generateWord();
     }
     setGuess("");
-    console.log(word)
-    console.log(guess)
+
   };
 
   return (
