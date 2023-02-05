@@ -1,5 +1,6 @@
 
-Link: https://super-cat-072241.netlify.app/
+"LetterLingo" is a fun vocabulary-testing game. A random English word has some of its letters hidden, and the goal is to guess the word correctly. The game keeps track of scores and provides feedback on each guess. Suitable for all ages, whether you're a language lover or just seeking entertainment.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
