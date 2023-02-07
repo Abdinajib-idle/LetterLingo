@@ -58,7 +58,7 @@ function App() {
   return (
     <div className="main_div">
       <div className="content-div">
-      <h1>Guess the Word</h1>
+      <h2>Guess the Word</h2>
       <p>Score: {score}</p>
       <p className="pulsate">{hiddenWord}</p>
       <form onSubmit={handleSubmit}>
