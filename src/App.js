@@ -42,7 +42,7 @@ function App() {
   // Function to submit the user's guess
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (word === guess) {
+    if (word === guess.toLowerCase()) {
       message.success("You got it!");
       setScore(score + 1);
       generateWord();
